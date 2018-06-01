@@ -341,7 +341,7 @@ public class MandelThing extends JFrame {
             // Draw the pixel. If the depth was not infinity (greater than max.
             // depth), determine the color from the color map. Otherwise, use black.
 
-            cc = (d < maxDepth ? colorMap[d % colorMap.length] : Color.black);
+            cc = (d > maxDepth ? Color.black : colorMap[d % colorMap.length]);
             plotPoint(pg, x, y, cc);
             plotPoint(ig, x, y, cc);
          }
